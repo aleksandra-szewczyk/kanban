@@ -39,15 +39,17 @@ $(document).ready(function(){
             return $column;
         }
         
-        Column.prototype = {
-            addCard: function(card) {
-                this.$element.children('ul').append(card.$element);
-            },
-            removeColumn: function() {
-                this.$element.remove();
-            }
-        };
     }
+    
+    Column.prototype = {
+        addCard: function(card) {
+            this.$element.children('ul').append(card.$element);
+        },
+        removeColumn: function() {
+            this.$element.remove();
+        }
+    };
+    
     
     
     function Card(description) {
@@ -71,13 +73,14 @@ $(document).ready(function(){
             
             return $card;
         }
-        
-        Card.prototype = {
-            removeCard: function() {
-                this.$element.remove();
-            }
-        }
     }
+    
+    Card.prototype = {
+        removeCard: function() {
+            this.$element.remove();
+        }
+    };
+    
   
     var board = {
         name: 'Tablica Kanban',
